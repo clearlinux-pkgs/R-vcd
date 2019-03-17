@@ -1,1 +1,5 @@
 # This file contains recursive sources that require this package
+R-Lahman
+R-VIM
+R-coin
+R-vcdExtra

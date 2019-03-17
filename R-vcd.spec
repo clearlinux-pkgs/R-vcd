@@ -4,7 +4,7 @@
 #
 Name     : R-vcd
 Version  : 1.4.4
-Release  : 13
+Release  : 14
 URL      : https://cran.r-project.org/src/contrib/vcd_1.4-4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/vcd_1.4-4.tar.gz
 Summary  : Visualizing Categorical Data
@@ -14,7 +14,7 @@ Requires: R-colorspace
 Requires: R-lmtest
 BuildRequires : R-colorspace
 BuildRequires : R-lmtest
-BuildRequires : clr-R-helpers
+BuildRequires : buildreq-R
 
 %description
 procedures aimed particularly at categorical data. Special
@@ -33,11 +33,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521172587
+export SOURCE_DATE_EPOCH=1552840804
 
 %install
+export SOURCE_DATE_EPOCH=1552840804
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1521172587
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -72,8 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library vcd|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  vcd || :
 
 
 %files
@@ -121,3 +120,4 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/vcd/help/vcd.rdx
 /usr/lib64/R/library/vcd/html/00Index.html
 /usr/lib64/R/library/vcd/html/R.css
+/usr/lib64/R/library/vcd/tests/demos.R
