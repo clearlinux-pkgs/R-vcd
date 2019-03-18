@@ -4,13 +4,12 @@
 #
 Name     : R-vcd
 Version  : 1.4.4
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/vcd_1.4-4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/vcd_1.4-4.tar.gz
 Summary  : Visualizing Categorical Data
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-zoo
 BuildRequires : R-colorspace
 BuildRequires : R-lmtest
 BuildRequires : R-zoo
@@ -33,10 +32,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552884070
+export SOURCE_DATE_EPOCH=1552922967
 
 %install
-export SOURCE_DATE_EPOCH=1552884070
+export SOURCE_DATE_EPOCH=1552922967
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
