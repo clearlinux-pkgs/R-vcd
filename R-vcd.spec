@@ -4,7 +4,7 @@
 #
 Name     : R-vcd
 Version  : 1.4.7
-Release  : 27
+Release  : 28
 URL      : https://cran.r-project.org/src/contrib/vcd_1.4-7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/vcd_1.4-7.tar.gz
 Summary  : Visualizing Categorical Data
@@ -27,21 +27,22 @@ procedures aimed particularly at categorical data. Special
 
 %prep
 %setup -q -c -n vcd
+cd %{_builddir}/vcd
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1585959506
+export SOURCE_DATE_EPOCH=1589571970
 
 %install
-export SOURCE_DATE_EPOCH=1585959506
+export SOURCE_DATE_EPOCH=1589571970
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
