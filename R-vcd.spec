@@ -7,7 +7,7 @@
 #
 Name     : R-vcd
 Version  : 1.4.12
-Release  : 55
+Release  : 56
 URL      : https://cran.r-project.org/src/contrib/vcd_1.4-12.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/vcd_1.4-12.tar.gz
 Summary  : Visualizing Categorical Data
